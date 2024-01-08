@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"
+        integrity="sha512-ju6u+4bPX50JQmgU97YOGAXmRMrD9as4LE05PdC3qycsGQmjGlfm041azyB1VfCXpkpt1i9gqXCT6XuxhBJtKg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<style>
+    * {
+        border: 2px solid grey;
+        padding: 10px;
+
+    }
+
+    html {
+        border: 2px solid grey;
+        padding: 5px;
+
+    }
+
+    body {
+        border: 2px solid gray;
+        padding: 15px;
+        color: red;
+    }
+
+    div {
+        border: 2px solid grey;
+        padding: 15px;
+        width: 500px;
+    }
+
+
+    span {
+        display: block;
+        color: gray;
+        
+    }
+</style>
+
+<body>
+    body(great-grandparent)
+    <div> div (great-grandparent)
+        <ul type="none">ul(grandparent)
+            <li>li(direct parent)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("span").parentsUntil("universal").css({ "border": "solid 2px red" })
+        })
+    </script>
+</body>
+
+</html>
